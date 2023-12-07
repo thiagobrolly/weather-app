@@ -24,11 +24,11 @@ export const LeftContent = styled.div`
   display: flex;
   gap: 8px;
 
-  img{
+  img {
     width: 80px;
   }
 
-  div{
+  div {
     display: flex;
     gap: 20px;
   }

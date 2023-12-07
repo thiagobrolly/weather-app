@@ -1,4 +1,10 @@
-import { createContext, useCallback, useContext, useEffect, useState } from 'react';
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { MainProps, ThemeContextData } from './types';
 import { lightTheme } from '../styles/theme/lightTheme';
@@ -15,9 +21,8 @@ export const CustomThemeProvider = ({ children }: MainProps) => {
     const savedTheme = localStorage.getItem('weatherApp:theme');
     if (savedTheme === 'light') {
       setTheme(lightTheme);
-    } 
-    else{
-      setTheme(defaultTheme)
+    } else {
+      setTheme(defaultTheme);
     }
   }, []);
 

@@ -7,13 +7,10 @@ import { useFetchWeather } from '../../hooks/useFetchWeather.ts';
 import * as S from './styles.ts';
 
 export function Home() {
-
   const { cities, citiesLoading, displayedCities, setDisplayedCities } =
-  useFetchCities();
-  
-  const { weatherData, isLoading, error, setSelectedCity } =
-  useFetchWeather();
+    useFetchCities();
 
+  const { weatherData, isLoading, error, setSelectedCity } = useFetchWeather();
 
   const handleCityClick = (city: string) => {
     setSelectedCity(city);
@@ -31,7 +28,6 @@ export function Home() {
     return <div>Carregando...</div>;
   }
 
-
   return (
     <DefaultLayout>
       <Header onChange={handleSearch} />
@@ -41,7 +37,7 @@ export function Home() {
           {isLoading ? (
             <p>Carregando...</p>
           ) : weatherData ? (
-            <WeatherDetail weatherData={weatherData}  />
+            <WeatherDetail weatherData={weatherData} />
           ) : (
             <>
               <p>Selecione uma cidade para ver a previsão do tempo.</p>

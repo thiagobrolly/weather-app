@@ -1,3 +1,2 @@
-export { CityDTO } from './CityDTO';
-export { WeatherDetailDTO } from './WeatherDetailDTO';
-
+export type { CityDTO } from './CityDTO';
+export type { WeatherDetailDTO } from './WeatherDetailDTO';

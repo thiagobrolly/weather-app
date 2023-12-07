@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { GlobalStyle } from './styles/global';
 import { Home } from './pages/Home';
-import { CustomThemeProvider } from './contexts'
+import { CustomThemeProvider } from './contexts';
 
 export function App() {
   const queryClient = new QueryClient();
@@ -9,7 +9,7 @@ export function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <CustomThemeProvider>
-          <Home />
+        <Home />
         <GlobalStyle />
       </CustomThemeProvider>
     </QueryClientProvider>
